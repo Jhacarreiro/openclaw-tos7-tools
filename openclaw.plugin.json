@@ -1,0 +1,86 @@
+{
+  "id": "tos7-tools",
+  "name": "TOS 7 Tools",
+  "description": "Read-only TerraMaster TOS 7 observability and inventory tools.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "required": [
+      "baseUrl"
+    ],
+    "properties": {
+      "baseUrl": {
+        "type": "string",
+        "description": "Base URL of the read-only TOS 7 bridge."
+      },
+      "tokenEnv": {
+        "type": "string",
+        "description": "Environment variable containing the bearer token."
+      },
+      "timeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 30000,
+        "default": 8000
+      }
+    },
+    "additionalProperties": false
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "tos_system",
+      "tos_power",
+      "tos_storage",
+      "tos_network",
+      "tos_services",
+      "tos_apps",
+      "tos_users",
+      "tos_shares",
+      "tos_security",
+      "tos_logs",
+      "tos_docker",
+      "tos_health_snapshot"
+    ]
+  },
+  "toolMetadata": {
+    "tos_system": {
+      "optional": true
+    },
+    "tos_power": {
+      "optional": true
+    },
+    "tos_storage": {
+      "optional": true
+    },
+    "tos_network": {
+      "optional": true
+    },
+    "tos_services": {
+      "optional": true
+    },
+    "tos_apps": {
+      "optional": true
+    },
+    "tos_users": {
+      "optional": true
+    },
+    "tos_shares": {
+      "optional": true
+    },
+    "tos_security": {
+      "optional": true
+    },
+    "tos_logs": {
+      "optional": true
+    },
+    "tos_docker": {
+      "optional": true
+    },
+    "tos_health_snapshot": {
+      "optional": true
+    }
+  }
+}

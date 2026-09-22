@@ -1,0 +1,23 @@
+{
+  "name": "openclaw-tos7-tools",
+  "version": "0.1.0",
+  "description": "Read-only TerraMaster TOS 7 tools for OpenClaw.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check src/index.js && python3 -m py_compile bridge/tos7_bridge.py",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "audit:public": "python3 scripts/audit_public.py"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.5.17"
+  },
+  "dependencies": {
+    "typebox": "^1.1.38"
+  },
+  "openclaw": {
+    "extensions": [
+      "./src/index.js"
+    ]
+  }
+}
