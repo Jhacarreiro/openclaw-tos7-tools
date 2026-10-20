@@ -1,5 +1,7 @@
 # OpenClaw TOS 7 Tools
 
+Expose TerraMaster TOS 7 system information to OpenClaw as typed, read-only tools. The integration prefers the official TOS CLI where available and avoids arbitrary remote shell execution.
+
 Read-only OpenClaw tools for TerraMaster TOS 7.
 
 This project exposes TOS 7 system information to OpenClaw through typed tools, using the official `tos ... --json` CLI where available and narrow, read-only host fallbacks for metrics not exposed by the CLI.
